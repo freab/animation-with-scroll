@@ -38,7 +38,7 @@ function AnimatedAxum() {
         break;
       case 3: // Section 4
         const rotationY = progress * Math.PI * 2;
-        const scale = 1 + Math.sin(progress * Math.PI) * 0.5;
+        const scale = 2 + Math.sin(progress * Math.PI) * 0.5;
         gsap.to(ref.current.rotation, { y: rotationY, duration: 0.1 });
         gsap.to(ref.current.scale, {
           x: scale,
@@ -48,7 +48,6 @@ function AnimatedAxum() {
         });
         break;
       case 4: // Section 5
-        gsap.to(ref.current.rotation, { y: 0, duration: 2.5 });
         gsap.to(ref.current.position, { x: 0, y: 0, z: 0, duration: 0.5 });
         gsap.to(ref.current.scale, { x: 1, y: 1, z: 1, duration: 0.5 });
         gsap.to(scene.background, { r: 1, g: 1, b: 1, duration: 0.5 });
