@@ -1,19 +1,15 @@
-import React, { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import React, { useRef, useMemo } from "react";
 import { useGLTF } from "@react-three/drei";
 
-function Axum() {
+function Axum({ material }) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/axum.glb");
-
-  useFrame((state, delta) => {});
+  const { nodes } = useGLTF("/axum.glb");
 
   return (
-    <group ref={group} className="model" position={[0, -1.5, 0]}>
+    <group ref={group} position={[0, -1.5, 0]}>
       <mesh
         geometry={nodes.The_Obelisk_Of_Axum.geometry}
-        material={nodes.The_Obelisk_Of_Axum.material}
-        scale={[1, 1, 1]}
+        material={material || nodes.The_Obelisk_Of_Axum.material}
       />
     </group>
   );
@@ -21,4 +17,4 @@ function Axum() {
 
 useGLTF.preload("/axum.glb");
 
-export default Axum;
+export default React.memo(Axum);
