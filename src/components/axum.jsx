@@ -9,7 +9,7 @@ function Axum({ material }) {
     <group ref={group} position={[0, -1.5, 0]}>
       <mesh
         geometry={nodes.The_Obelisk_Of_Axum.geometry}
-        material={material || nodes.The_Obelisk_Of_Axum.material}
+        material={nodes.The_Obelisk_Of_Axum.material}
       />
     </group>
   );
