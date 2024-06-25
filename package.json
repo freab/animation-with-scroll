@@ -16,6 +16,7 @@
     "d3-ease": "^3.0.1",
     "framer-motion": "^11.2.12",
     "gsap": "^3.12.5",
+    "lil-gui": "^0.19.2",
     "postprocessing": "^6.35.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
